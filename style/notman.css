@@ -1,0 +1,14 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background: #fff;
+  color: #5a3c59;
+  font-size: 8em;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
