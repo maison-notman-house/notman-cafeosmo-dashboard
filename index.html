@@ -4,13 +4,30 @@
     <title> Notman Caf&eacute; OSMO Dashboard </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="./js/lib/ken-burns-slideshow.global.min.js"></script>
+    <script src="./js/lib/jquery-2.2.4.min.js"></script>
+    
     <script language="javascript">
+        var delay = 2000;
+        var index = -1;
+        
+        function nextSlide() {
+            var elements = $('ul li');
+            if (index < elements.length) {
+                index++;
+            } else {
+                index = 0;
+            }
+            
+            elements.hide();
+            $(elements[index]).show();
+            $(elements[index]).css('display', 'block');
+            elements
+        }
+        
         document.addEventListener("DOMContentLoaded", function(event) {
-			var slideshow = new KenBurnsSlideshow({
-				el: document.querySelector('ul'),
-				transitionDelay: 7000
-			});
-			slideshow.init();
+            nextSlide();
+            setInterval(nextSlide, 7000);
+
 		});
     </script>
 
@@ -19,6 +36,7 @@
   </head>
   <body>
     <ul>
+       <li><img src="./images/slides/logo.png"></li>
        <li><img src="./images/slides/00001.jpg"></li>
        <li><img src="./images/slides/00002.jpg"></li>
        <li><img src="./images/slides/00003.jpg"></li>
