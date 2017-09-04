@@ -6,11 +6,11 @@ html {
 body {
   color: #5a3c59;
   font-size: 8em;
-  background: url(../images/cafeosmo-1920x1080.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
+  background: url(../images/imageFromInstagram.jpg) #000 no-repeat center/60%; 
+    /*-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover;*/
 }
 
 .no-scroll {
