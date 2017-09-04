@@ -6,7 +6,8 @@ html {
 body {
   color: #5a3c59;
   font-size: 8em;
-  background: url(../images/imageFromInstagram.jpg) #000 no-repeat center/60%; 
+/*   background: url(../images/imageFromInstagram.jpg) #000 no-repeat center/60%;  */
+  background: black;
     /*-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -15,4 +16,42 @@ body {
 
 .no-scroll {
   overflow: hidden;
+}
+
+#credits {
+    position: absolute;
+    color: white;
+    left: 20px;
+    bottom: 20px;
+    font-size: 16pt;
+}
+
+#logo {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+#logo-notman {
+    position: absolute;
+    right: 20px;
+    top: 140px;
+}
+
+
+#logo-reelyactive {
+    position: absolute;
+    right: 20px;
+    top: 260px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+/*     overflow: hidden; */
+}
+
+.logo img {
+     width: 100px;
+     vertical-align: top;
 }
