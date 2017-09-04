@@ -18,6 +18,26 @@ body {
   overflow: hidden;
 }
 
+ul {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    padding: 0;
+}
+
+ul > li {
+    display: block;
+}
+
+ul > li > img {
+    display: block;
+    margin: 0 auto;
+    height: 100vh;
+}
+
 #credits {
     position: absolute;
     color: white;
