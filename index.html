@@ -3,12 +3,40 @@
   <head>
     <title> Notman Caf&eacute; OSMO Dashboard </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./js/lib/ken-burns-slideshow.global.min.js"></script>
+    <script language="javascript">
+        document.addEventListener("DOMContentLoaded", function(event) {
+			var slideshow = new KenBurnsSlideshow({
+				el: document.querySelector('ul'),
+				transitionDelay: 7000
+			});
+			slideshow.init();
+		});
+    </script>
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style/notman.css">
   </head>
   <body>
-    <div class="no-scroll">
-      <!-- Content will go here -->
-    </div>
+    <ul>
+       <li><img src="./images/slides/00001.jpg"></li>
+       <li><img src="./images/slides/00002.jpg"></li>
+       <li><img src="./images/slides/00003.jpg"></li>
+       <li><img src="./images/slides/00004.jpg"></li>
+       <li><img src="./images/slides/00005.jpg"></li>
+       <li><img src="./images/slides/00006.jpg"></li>
+       <li><img src="./images/slides/00007.jpg"></li>
+       <li><img src="./images/slides/00008.jpg"></li>
+       <li><img src="./images/slides/00009.jpg"></li>
+       <li><img src="./images/slides/00010.jpg"></li>
+       <li><img src="./images/slides/00011.jpg"></li>
+       <li><img src="./images/slides/00012.jpg"></li>
+       <li><img src="./images/slides/00013.jpg"></li>
+       <li><img src="./images/slides/00014.jpg"></li>
+    </ul>
+    <div id="credits">Photos sur Instagram • Photos from Instagram</div>
+    <div id="logo" class="logo"><img src="./images/logo.jpg"/></div>
+    <div id="logo-notman" class="logo"><img src="./images/notman_logo.png"/></div>
+    <div id="logo-reelyactive" class="logo"><img src="./images/reelyactive_logo.png"/></div>
   </body>
 </html>
