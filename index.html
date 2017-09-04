@@ -3,58 +3,49 @@
   <head>
     <title> Notman Caf&eacute; OSMO Dashboard </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="./js/lib/ken-burns-slideshow.global.min.js"></script>
-    <script src="./js/lib/jquery-2.2.4.min.js"></script>
-    
-    <script language="javascript">
-        var delay = 2000;
-        var index = -1;
-        
-        function nextSlide() {
-            var elements = $('ul li');
-            if (index < elements.length) {
-                index++;
-            } else {
-                index = 0;
-            }
-            
-            elements.hide();
-            $(elements[index]).show();
-            $(elements[index]).css('display', 'block');
-            elements
-        }
-        
-        document.addEventListener("DOMContentLoaded", function(event) {
-            nextSlide();
-            setInterval(nextSlide, 7000);
-
-		});
-    </script>
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style/notman.css">
   </head>
   <body>
     <ul>
-       <li><img src="./images/slides/logo.png"></li>
-       <li><img src="./images/slides/00001.jpg"></li>
-       <li><img src="./images/slides/00002.jpg"></li>
-       <li><img src="./images/slides/00003.jpg"></li>
-       <li><img src="./images/slides/00004.jpg"></li>
-       <li><img src="./images/slides/00005.jpg"></li>
-       <li><img src="./images/slides/00006.jpg"></li>
-       <li><img src="./images/slides/00007.jpg"></li>
-       <li><img src="./images/slides/00008.jpg"></li>
-       <li><img src="./images/slides/00009.jpg"></li>
-       <li><img src="./images/slides/00010.jpg"></li>
-       <li><img src="./images/slides/00011.jpg"></li>
-       <li><img src="./images/slides/00012.jpg"></li>
-       <li><img src="./images/slides/00013.jpg"></li>
-       <li><img src="./images/slides/00014.jpg"></li>
+       <li class="slide-image" ><img src="./images/slides/logo.png"></li>
+       <li class="slide-image" ><img src="./images/slides/00001.jpg"></li>
+       <li class="slide-image" ><img src="./images/slides/00002.jpg"></li>
+       <li class="slide-image" ><img src="./images/slides/00003.jpg"></li>
+       <li class="slide-image" ><img src="./images/slides/00004.jpg"></li>
+       <li class="slide-image" ><img src="./images/slides/00005.jpg"></li>
+       <li class="slide-image" ><img src="./images/slides/00006.jpg"></li>
+       <li class="slide-image" ><img src="./images/slides/00007.jpg"></li>
+       <li class="slide-image" ><img src="./images/slides/00008.jpg"></li>
+       <li class="slide-image" ><img src="./images/slides/00009.jpg"></li>
+       <li class="slide-image" ><img src="./images/slides/00010.jpg"></li>
+       <li class="slide-image" ><img src="./images/slides/00011.jpg"></li>
+       <li class="slide-image" ><img src="./images/slides/00012.jpg"></li>
+       <li class="slide-image" ><img src="./images/slides/00013.jpg"></li>
+       <li class="slide-image" ><img src="./images/slides/00014.jpg"></li>
     </ul>
     <div id="credits">Photos sur Instagram • Photos from Instagram</div>
     <div id="logo" class="logo"><img src="./images/logo.jpg"/></div>
     <div id="logo-notman" class="logo"><img src="./images/notman_logo.png"/></div>
     <div id="logo-reelyactive" class="logo"><img src="./images/reelyactive_logo.png"/></div>
+
+    <script language="javascript">
+
+        var slideIndex = 0;
+        var sleep = 7000;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("slide-image");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) {slideIndex = 1}
+            x[slideIndex-1].style.display = "block";
+            setTimeout(carousel, sleep);
+        }
+    </script>
   </body>
 </html>
